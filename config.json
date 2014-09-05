@@ -1,0 +1,381 @@
+{
+	"modules": {
+		"inicio": {},
+		"empresa": {},
+		"productos": {},
+		"proyectos": {},
+		"servicios": {},
+		"equipo": {},
+		"contacto": {}
+	},
+	"url": "modules/",
+	"equipo": {
+		"maquinado": {
+			"img": "MES10.jpg"
+		},
+		"tornos_m": {
+			"img": "MES5.jpg"
+		}, 
+		"fresadoras": {
+			"img": "MES6.jpg"
+		}, 
+		"tratamiento": {
+			"img": "MES4.jpg"
+		}, 
+		"tornos_a": {
+			"img": "MES13.jpg"
+		}, 
+		"rectificadores": {
+			"img": "MES10.jpg"
+		}
+	},
+	"url_equipo": "img/equipo/600X300/",
+	"servicios": {
+		"maquinado": {
+			"img": "MS11.jpg",
+			"album": [
+				{"img": "1.jpg"},
+				{"img": "2.jpg"},
+				{"img": "3.jpg"}
+			],
+			"pic_per_row": 3,
+			"descriptions": [
+				{
+					"title": "",
+					"max_dim": ["40x20”"]
+				}
+			],
+			"url": "img/servicios/maquinado/"
+		},
+		"diseno": {
+			"img": "MS9.jpg",
+			"album": [
+				{"img": "autocad.jpg"},
+				{"img": "solidWORKS.png"}
+			],
+			"pic_per_row": 3,
+			"descriptions": [
+				{
+					"title": ""
+				}
+			],
+			"url": "img/servicios/diseno/"
+		},
+		"fresadora": {
+			"img": "MS2.jpg",
+			"album": [
+				{"img": "1.jpg"},
+				{"img": "2.jpg"},
+				{"img": "3.jpg"}
+			],
+			"pic_per_row": 3,
+			"descriptions": [
+				{
+					"title":"fresadora_desc",
+					"max_dim": ["10”x54”"]
+				}
+			],
+			"url": "img/servicios/fresadora/"
+		},
+		"tratamiento": {
+			"img": "MES4.jpg",
+			"album": [
+				{"img": "1.jpeg"}
+			],
+			"pic_per_row": 3,
+			"descriptions": [
+				{
+					"title":"horno",
+					"max_dim": ["9x12”x18”"]
+				}
+			],
+			"url": "img/servicios/tratamiento/"
+		},
+		"torno": {
+			"img": "MS13.jpg",
+			"album": [
+				{"img": "bwITORNM.jpg"},
+				{"img": "ITORN.jpg"},
+				{"img": "ITORNOB.jpg"}
+			],
+			"pic_per_row": 3,
+			"descriptions": [
+				{
+					"title":"tornos"
+				},
+				{
+					"title":"tornos_manuales",
+					"max_dim": ["26”x 120”"]
+				},
+				{
+					"title": "tornos_automaticos",
+					"max_dim": ["8”x20”"]
+				}
+			],
+			"url": "img/servicios/torno/"
+		},
+		"rectificado": {
+			"img": "MSrect.jpg",
+			"album": [
+				{"img": "1.jpg"},
+				{"img": "2.jpg"}
+			],
+			"pic_per_row": 3,
+			"descriptions": [
+				{
+					"title":"rectificadoras",
+					"max_dim": ["6”x18”", "12x 24”"]
+				}
+			],
+			"url": "img/servicios/rectificado/"
+		},
+		"soldadura": {
+			"img": "MSOLD.jpg",
+			"album": [
+				{"img": "ISOLD.jpg"}
+			],
+			"pic_per_row": 1,
+			"descriptions": [
+				{"title": "tig"},
+				{"title": "mig"},
+				{"title": "electrodo"}
+			],
+			"url": "img/servicios/soldadura/",
+			"banner": "banner.jpg",
+			"featured": true
+		}
+	},
+	"url_servicios": "img/servicios/600X300/",
+	"productos":[
+		{
+			"img": "PD1.jpg",
+			"nombre": "enfriadores",
+			"tipos": ["piezas", "maquinas", "refacciones"],
+			"categorias": ["rectificadas", "diseno"]
+		},
+		{
+			"img": "PD4.jpg",
+			"nombre": "enfriadores",
+			"tipos": ["piezas", "maquinas", "refacciones"],
+			"categorias": ["rectificadas", "diseno"]
+		},
+		{
+			"img": "PD2.jpg",
+			"nombre": "molde",
+			"tipos": ["piezas", "refacciones"],
+			"categorias": ["cortes", "metalicas"]
+		},
+		{
+			"img": "PD9.jpg",
+			"nombre": "molde_sup",
+			"tipos": ["piezas", "refacciones"],
+			"categorias": ["cortes", "metalicas"]
+		},
+		{
+			"img": "PD3.jpg",
+			"nombre": "pines_loc",
+			"tipos": ["piezas", "refacciones"],
+			"categorias": ["diseno"]
+		},
+		{
+			"img": "PD6.jpg",
+			"nombre": "pines_loc",
+			"tipos": ["piezas", "refacciones"],
+			"categorias": ["diseno"]
+		},
+		{
+			"img": "PD5.jpg",
+			"nombre": "clamp_pos",
+			"tipos": ["piezas", "refacciones"],
+			"categorias": ["metalicas"]
+		},
+		{
+			"img": "PD7.jpg",
+			"nombre": "enfriadores_sup",
+			"tipos": ["piezas", "maquinas", "refacciones"],
+			"categorias": ["rectificadas", "diseno"]
+		},
+		{
+			"img": "PD8.jpg",
+			"nombre": "clamp_pos",
+			"tipos": ["piezas", "refacciones"],
+			"categorias": ["metalicas"]
+		},
+		{
+			"img": "PD10.jpg",
+			"nombre": "enfriadores_lat",
+			"tipos": ["piezas", "maquinas", "refacciones"],
+			"categorias": ["rectificadas", "diseno"]
+		},
+		{
+			"img": "PD11.jpg",
+			"nombre": "enfriadores_lat",
+			"tipos": ["piezas", "maquinas", "refacciones"],
+			"categorias": ["rectificadas", "diseno"]
+		},
+		{
+			"img": "PD12.jpg",
+			"nombre": "enfriadores_lat",
+			"tipos": ["piezas", "maquinas", "refacciones"],
+			"categorias": ["rectificadas", "diseno"]
+		},
+		{
+			"img": "PD14.jpg",
+			"nombre": "empujadores",
+			"tipos": ["maquinas"],
+			"categorias": ["diseno"]
+		},
+		{
+			"img": "PD23.jpg",
+			"nombre": "empujadores",
+			"tipos": ["maquinas"],
+			"categorias": ["diseno"]
+		},
+		{
+			"img": "PD21.jpg",
+			"nombre": "bases_ext",
+			"tipos": ["piezas"],
+			"categorias": ["metalicas"]
+		},
+		{
+			"img": "PD15.jpg",
+			"nombre": "bases_int",
+			"tipos": ["piezas"],
+			"categorias": ["metalicas"]
+		},
+		{
+			"img": "PD13.jpg",
+			"nombre": "flechas_nav",
+			"tipos": ["piezas"],
+			"categorias": ["diseno", "metalicas"]
+		},
+		{
+			"img": "PD16.jpg",
+			"nombre": "flechas_nav_zoom",
+			"tipos": ["piezas"],
+			"categorias": ["diseno", "metalicas"]
+		},
+		{
+			"img": "PD17.jpg",
+			"nombre": "flechas_nav_sup",
+			"tipos": ["piezas"],
+			"categorias": ["diseno", "metalicas"]
+		},
+		{
+			"img": "PD18.jpg",
+			"nombre": "manifool",
+			"tipos": ["maquinas"],
+			"categorias": ["diseno"]
+		},
+		{
+			"img": "PD19.jpg",
+			"nombre": "navajas",
+			"tipos": ["piezas", "refacciones"],
+			"categorias": ["metalicas"]
+		},
+		{
+			"img": "PD20.jpg",
+			"nombre": "navajas",
+			"tipos": ["piezas", "refacciones"],
+			"categorias": ["metalicas"]
+		},
+		{
+			"img": "PD25.jpg",
+			"nombre": "porta_navajas",
+			"tipos": ["piezas"],
+			"categorias": ["metalicas", "diseno"]
+		},
+		{
+			"img": "PD22.jpg",
+			"nombre": "porta_nariz_lat",
+			"tipos": ["piezas"],
+			"categorias": ["metalicas", "diseno"]
+		},
+		{
+			"img": "PD27.jpg",
+			"nombre": "porta_nariz_sup",
+			"tipos": ["piezas"],
+			"categorias": ["metalicas", "diseno"]
+		},
+		{
+			"img": "PD24.jpg",
+			"nombre": "fixture_clamp_gir",
+			"tipos": ["maquinas"],
+			"categorias": ["metalicas", "diseno"]
+		}
+	],
+	"url_productos": "img/productos/",
+	"proyectos": [
+		{
+			"titulo": "Estación aplicación de pegamento",
+			"descripcion": "Blandit incorrupte quaerendum in quo, nibh impedit id vis, vel no nullam semper audiam. Ei populo graeci consulatu mei, has ea stet modus phaedrum. Inani oblique ne has, duo et veritus detraxit. Tota ludus oratio ea mel, offendit persequeris ei vim.",
+			"fecha": "2013-01-01",
+			"categorias": ["rectificadas", "cortes"],
+			"imgs": [{"img": "PY1.jpg"}, {"img": "PY2.jpg"}, {"img":"PY3.jpg"}]
+		},
+		{
+			"titulo": "Dobladora de etiquetas",
+			"descripcion": "Blandit incorrupte quaerendum in quo, nibh impedit id vis, vel no nullam semper audiam. Ei populo graeci consulatu mei, has ea stet modus phaedrum. Inani oblique ne has, duo et veritus detraxit. Tota ludus oratio ea mel, offendit persequeris ei vim.",
+			"fecha": "2012-12-01",
+			"categorias": ["diseños"],
+			"imgs": [{"img": "PY4.jpg"}, {"img": "PY5.jpg"}]
+		},
+		{
+			"titulo": "Brazo posicionador",
+			"descripcion": "Blandit incorrupte quaerendum in quo, nibh impedit id vis, vel no nullam semper audiam. Ei populo graeci consulatu mei, has ea stet modus phaedrum. Inani oblique ne has, duo et veritus detraxit. Tota ludus oratio ea mel, offendit persequeris ei vim.",
+			"fecha": "2010-05-11",
+			"categorias": ["diseños", "metálicas"],
+			"imgs": [{"img": "PY6.jpg"}, {"img": "PY15.jpg"}]
+		},
+		{
+			"titulo": "Fixture de ensamble",
+			"descripcion": "Blandit incorrupte quaerendum in quo, nibh impedit id vis, vel no nullam semper audiam. Ei populo graeci consulatu mei, has ea stet modus phaedrum. Inani oblique ne has, duo et veritus detraxit. Tota ludus oratio ea mel, offendit persequeris ei vim.",
+			"fecha": "2010-05-11",
+			"categorias": ["diseños", "metálicas"],
+			"imgs": [{"img": "PY4.jpg"}]
+		},
+		{
+			"titulo": "Torno para soldadura",
+			"descripcion": "Blandit incorrupte quaerendum in quo, nibh impedit id vis, vel no nullam semper audiam. Ei populo graeci consulatu mei, has ea stet modus phaedrum. Inani oblique ne has, duo et veritus detraxit. Tota ludus oratio ea mel, offendit persequeris ei vim.",
+			"fecha": "2010-05-11",
+			"categorias": ["diseños", "metálicas"],
+			"imgs": [{"img": "PY9.jpg"}]
+		},
+		{
+			"titulo": "Estación de centrado",
+			"descripcion": "Blandit incorrupte quaerendum in quo, nibh impedit id vis, vel no nullam semper audiam. Ei populo graeci consulatu mei, has ea stet modus phaedrum. Inani oblique ne has, duo et veritus detraxit. Tota ludus oratio ea mel, offendit persequeris ei vim.",
+			"fecha": "2010-05-11",
+			"categorias": ["diseños", "metálicas"],
+			"imgs": [{"img": "PY10.jpg"}]
+		},
+		{
+			"titulo": "Fixture de enfriamiento",
+			"descripcion": "Blandit incorrupte quaerendum in quo, nibh impedit id vis, vel no nullam semper audiam. Ei populo graeci consulatu mei, has ea stet modus phaedrum. Inani oblique ne has, duo et veritus detraxit. Tota ludus oratio ea mel, offendit persequeris ei vim.",
+			"fecha": "2010-05-11",
+			"categorias": ["diseños", "metálicas"],
+			"imgs": [{"img": "PY11.jpg"}]
+		},
+		{
+			"titulo": "Brazos enfriadores",
+			"descripcion": "Blandit incorrupte quaerendum in quo, nibh impedit id vis, vel no nullam semper audiam. Ei populo graeci consulatu mei, has ea stet modus phaedrum. Inani oblique ne has, duo et veritus detraxit. Tota ludus oratio ea mel, offendit persequeris ei vim.",
+			"fecha": "2010-05-11",
+			"categorias": ["diseños", "metálicas"],
+			"imgs": [{"img": "PY12.jpg"}]
+		},
+		{
+			"titulo": "Fixture de ensamble",
+			"descripcion": "Blandit incorrupte quaerendum in quo, nibh impedit id vis, vel no nullam semper audiam. Ei populo graeci consulatu mei, has ea stet modus phaedrum. Inani oblique ne has, duo et veritus detraxit. Tota ludus oratio ea mel, offendit persequeris ei vim.",
+			"fecha": "2010-05-11",
+			"categorias": ["diseños", "metálicas"],
+			"imgs": [{"img": "PY14.jpg"}]
+		}
+	],
+	"url_proyectos": "img/proyectos/",
+	"galeria": [
+		{"img": "p1.jpg", "title": "", "caption": ""},
+		{"img": "p2.jpg", "title": "", "caption": ""},
+		{"img": "p5.jpg", "title": "", "caption": ""},
+		{"img": "p6.jpg", "title": "", "caption": ""}
+	],
+	"url_galeria": "img/galeria/"
+}

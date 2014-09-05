@@ -1,0 +1,7 @@
+{
+	"project":"Samanaid",
+	"project_path":"/",
+	"modules":["inicio", "empresa", "productos", "proyectos", "servicios", "equipo", "contacto"],
+	"module_path":"modules",
+	"languages":["es"]
+}

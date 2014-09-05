@@ -1,0 +1,22 @@
+<content>
+	<dom>
+		<form-title>Envíanos un mensaje</form-title>
+		<asunto>Asunto</asunto>
+		<email>E-mail</email>
+		<ejemplo>ejemplo@correo.com</ejemplo>
+		<mensaje>Mensaje</mensaje>
+		<descripcion>Descripción</descripcion>
+		<enviar>Enviar</enviar>
+
+		<direccion-1>DIRECCIÓN: </direccion-1>
+
+		<telefonos-1>TELÉFONOS:</telefonos-1>
+		<telefonos-2>(614) 4824940</telefonos-2>
+		<telefonos-3>(614) 4190227</telefonos-3>
+
+		<correo-1>CORREO ELECTRÓNICO</correo-1>
+		<correo-2>ventas@semaind.com</correo-2>
+
+		<enviar>Enviar</enviar>
+	</dom>
+</content>

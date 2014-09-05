@@ -1,0 +1,229 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>CCSlider</title>
+
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,bold' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/ccslider.css" />
+	<link rel="stylesheet" href="css/style.css" />
+
+	<style>
+		.slider2d .prev {
+			left: -35px;
+		}
+
+		.slider2d .next {
+			right: -35px;
+		}
+	</style>
+
+	<!--[if lt IE 8]>
+		<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+	<![endif]-->
+
+	<!--[if lt IE 9]>
+		<style type="text/css">
+			.slider-caption {
+				background: transparent;
+				-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2FFFFFF,endColorstr=#B2FFFFFF)"; /* IE8 */
+				filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2FFFFFF,endColorstr=#B2FFFFFF);   /* IE6 & 7 */
+				zoom: 1;
+			}
+		</style>
+
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+
+</head>
+<body>
+
+
+	<header>
+		<hgroup>
+			<h1 id="title"><img src="images/title.png" alt="ccslider" /></h1>
+			<h2 id="subtitle">The slider that opens a new dimension</h2>
+		</hgroup>
+
+		<nav id="demo-nav">
+			<ul>
+				<li><a href="index.html" title="Slideshow with custom defined transitions per slide using only 'Cube' 3d effects">Demo 1</a></li>
+				<li><a href="demo2.html" title="Slideshow with randomly changing 3d effects and some transition options defined per slide">Demo 2</a></li>
+				<li><a href="demo3.html" title="Slideshow with randomly changing 2d effects">Demo 3</a></li>
+				<li><a href="demo4.html" title="Slideshow with randomly changing 2d effects and with thumbnails as control links">Demo 4</a></li>
+				<li class="active"><a href="demo5.html" title="Select any effect from the available list of 3d and 2d effects and try it out">Demo 5</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<div id="slider" class="slider3d">
+		<img src="gallery/demo4/pic1.jpg" alt="This is an example of a simple caption" />
+		<img src="gallery/demo4/pic2.jpg" alt="" data-href="http://google.com" data-captionelem="#caption" />
+		<img src="gallery/demo4/pic3.jpg" alt="" />
+		<img src="gallery/demo4/pic4.jpg" alt="" />
+		<img src="gallery/demo4/pic5.jpg" alt="" />
+		<img src="gallery/demo4/pic6.jpg" alt="" />
+	</div>
+
+	<div id="caption" class="cc-caption">This is an example of a caption with a <a href="http://www.google.com">link</a></div>
+
+	<article id="main">
+
+		<section id="description">
+			<h3>Overview</h3>
+			<p><strong>CCSlider</strong> is an unique jQuery slideshow plugin. It supports 3d transitions! There are 14 stunning 3d transitions available,
+			   and also 16 stylish 2d transitions. You have the option for mentioning a 2d transition fallback for old browsers that don't support
+			   HTML5 Canvas, which is used for producing the 3d transitions. The slider is fully responsive, works in mobile devices and supports touch gestures.
+			   The plugin also supports HTML captions, autoplay of slides, custom HTML content and custom transitions per slide. See below for a list of features
+			   available in the plugin.
+			</p>
+
+
+			<h3>Features</h3>
+
+			<ul id="features">
+				<li>14 HTML5 Canvas based 3d animated effects.</li>
+				<li>16 stylish 2d animated effects.</li>
+				<li>Fallback to a 2d effect of your choice for browsers that don't support HTML5 Canvas. Can also mention an animation speed for the fallback effect.</li>
+				<li>Option to mention the number of slices for 3d effects.</li>
+				<li>Option to mention the animation delay between individual slices.</li>
+				<li>Can also mention in which direction the delay will propagate. There are four such directions.</li>
+				<li>Option to mention the offset along z-axis and the separation between slices while animating for 3d effects.</li>
+				<li>Mention an easing option of your choice for 3d effects.</li>
+				<li>Can mention custom transition parameters for each slide.</li>
+				<li>Option to have a shadow for "Cube" 3d effects. Can also mention a shadow color of your choice.</li>
+				<li>Supports HTML captions. There are 4 available caption positions - bottom, top, left, right.</li>
+				<li>Each slide can have a different caption position.</li>
+				<li>Captions can have animated transitions (fade, slide) or none at all.</li>
+				<li>Option to have control links to individual slides. Can also have thumbnails as links.</li>
+				<li>Each slide image can also act as a link to an external page.</li>
+				<li>Supports custom HTML content for each slide. These contents appear over the slide images. You can style and animate them anyway you want. You can also embed videos in the slides using this option.</li>
+				<li>Autoplay option. Play/pause buttons are generated when Autoplay option is chosen.</li>
+				<li>Option to pause Autoplay when hovering over slider.</li>
+				<li>Fully responsive and works in all screen sizes ranging from desktop to mobile browsers.</li>
+				<li>Can navigate through slides using touch gestures in iOS, Android and other touch-screen devices.</li>
+				<li>Options for callback functions are provided that execute either before or after a slide changes. Custom events for these 'before' and 'after' slide change events are also provided.</li>
+				<li>Helpful API functions are provided, such as next(), prev(), start(), stop(), goToSlide() and destroy(), which allow for programmatic manipulation of the slideshow.</li>
+			</ul>
+
+
+			<h3>Browser Support</h3>
+			<p>The 3d effects will run only on browsers that support HTML5 Canvas. On the other hand the 2d effects will run on most
+			   available browsers. If you choose a 3d effect then you can mention a 2d effect of your choice for browsers that don't support Canvas.
+			   Internet Explorer 8 and below do not support Canvas. Overall the browsers in which CCSlider will work are
+			</p>
+
+			<ul id="browsers">
+				<li>Firefox 3.0+</li>
+				<li>Chrome 3.0+</li>
+				<li>Safari 3.0+</li>
+				<li>Opera 9.5+</li>
+				<li>Internet Explorer 6.0+</li>
+			</ul>
+		</section>  <!-- end #description -->
+
+
+
+
+		<aside id="effects">
+			<a class="effectType">3d Effect</a>
+			<a class="effectType">2d Effect</a>
+
+
+			<div id="effect3d">
+
+				<div class="effectList">
+					<h3>3d effects</h3>
+					<p class="selected">Cube Up</p>
+
+					<ul class="dropDown" data-type="3d" data-effect="true">
+						<li data-effectname="cubeUp">Cube Up</li>
+						<li data-effectname="cubeDown">Cube Down</li>
+						<li data-effectname="cubeRight">Cube Right</li>
+						<li data-effectname="cubeLeft">Cube Left</li>
+						<li data-effectname="flipUp">Flip Up</li>
+						<li data-effectname="flipDown">Flip Down</li>
+						<li data-effectname="flipRight">Flip Right</li>
+						<li data-effectname="flipLeft">Flip Left</li>
+						<li data-effectname="blindsVertical">Blinds Vertical</li>
+						<li data-effectname="blindsHorizontal">Blinds Horizontal</li>
+						<li data-effectname="gridBlocksUp">Grid Blocks Up</li>
+						<li data-effectname="gridBlocksDown">Grid Blocks Down</li>
+						<li data-effectname="gridBlocksRight">Grid Blocks Right</li>
+						<li data-effectname="gridBlocksLeft">Grid Blocks Left</li>
+					</ul>
+				</div>
+
+				<div id="sliceList">
+					<h3>Number of slices</h3>
+					<p class="selected">3</p>
+
+					<ul class="dropDown" data-type="3d" data-slice="true">
+						<li>1</li>
+						<li>2</li>
+						<li>3</li>
+						<li>4</li>
+						<li>5</li>
+						<li>6</li>
+						<li>7</li>
+						<li>8</li>
+						<li>9</li>
+						<li>10</li>
+						<li>15</li>
+					</ul>
+				</div>
+
+				<p id="no-3d">The 3d effects will not work in your browser</p>
+
+			</div>
+
+
+			<div id="effect2d">
+				<div class="effectList">
+					<h3>2d effects</h3>
+					<p class="selected">Choose an effect</p>
+
+					<ul class="dropDown" data-type="2d" data-effect="true">
+						<li data-effectname="random">Random</li>
+						<li data-effectname="fade">Fade</li>
+						<li data-effectname="horizontalOverlap">Horizontal Overlap</li>
+						<li data-effectname="verticalOverlap">Vertical Overlap</li>
+						<li data-effectname="horizontalSlide">Horizontal Slide</li>
+						<li data-effectname="verticalSlide">Vertical Slide</li>
+						<li data-effectname="horizontalWipe">Horizontal Wipe</li>
+						<li data-effectname="verticalWipe">Vertical Wipe</li>
+						<li data-effectname="horizontalSplit">Horizontal Split</li>
+						<li data-effectname="verticalSplit">Vertical Split</li>
+						<li data-effectname="fadeSlide">Fade Slide</li>
+						<li data-effectname="circle">Circle</li>
+						<li data-effectname="fadeZoom">Fade Zoom</li>
+						<li data-effectname="clock">Clock</li>
+						<li data-effectname="zoomInOut">Zoom In Out</li>
+						<li data-effectname="spinFade">Spin Fade</li>
+						<li data-effectname="rotate">Rotate</li>
+					</ul>
+				</div>
+			</div>
+
+		</aside>  <!-- end #effects -->
+
+	</article>  <!-- end #main -->
+
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script>!window.jQuery && document.write('<script src="js/jquery-1.9.1.min.js"><\/script>')</script>
+	<script src="js/jquery-migrate-1.1.1.min.js"></script>
+	<script src="js/jquery.tools.tooltip.min.js"></script>
+	<script src="js/jquery.easing.1.3.min.js"></script>
+	<script src="js/jquery.ccslider-3.0.2.min.js"></script>
+	<script src="js/demo.js"></script>
+	<script>
+		$(function(){
+			$('#demo-nav').find('a').tooltip({effect: 'slide'});
+		});
+	</script>
+</body>
+</html>

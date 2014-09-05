@@ -1,0 +1,45 @@
+<content>
+	<dom>
+		<max-dim>Máximas dimensiones: </max-dim>
+		<back>Volver</back>
+
+		<title>Nuestro principal objetivo es lograr la total satisfacción de nuestros clientes ofreciendo un servicio integral que nos permita distinguirnos como una empresa responsable y  altamente competitiva dentro del mercado.</title>
+
+		<maquinado>Maquinado CNC</maquinado>
+		<maquinado-description>El maquinado CNC consiste en el mecanizado de piezas utilizando máquinas de control numérico</maquinado-description>
+
+		<diseno>Diseño y automatización</diseno>
+		<diseno-description>Programas que utilizamos: </diseno-description>
+
+		<fresadora>Taller de fresado</fresadora>
+		<fresadora_desc>Fresadora</fresadora_desc>
+		<fresadora_desc-description>Una fresadora es una máquina herramienta utilizada para realizar mecanizados por arranque de viruta mediante el movimiento de una herramienta rotativa de varios filos de corte denominada fresa. Son las máquinas más adecuadas por la variedad de mecanizados que pueden realizar y la flexibilidad que permiten en el proceso de fabricación.</fresadora_desc-description>
+
+		<tratamiento>Tratamiento térmico</tratamiento>
+		<horno>Horno</horno>
+		<horno-description>Es el conjunto de operaciones de calentamiento y enfriamiento, bajo condiciones controladas de temperatura, tiempo de permanencia, velocidad, presión, etc., de los metales o las aleaciones en estado sólido, con el fin de mejorar sus propiedades mecánicas, especialmente la dureza, la resistencia y la elasticidad. Los materiales a los que se aplica el tratamiento térmico son, básicamente, el acero.</horno-description>
+
+		<torno>Torno</torno>
+		<tornos>Tornos</tornos>
+		<tornos-description>Permiten mecanizar piezas de forma geométrica de revolución. Estas máquinas-herramienta operan haciendo girar la pieza a mecanizar.</tornos-description>
+		<tornos_manuales>Tornos manuales</tornos_manuales>
+		<tornos_manuales-description>En nuestro taller de torno contamos con...</tornos_manuales-description>
+		<tornos_automaticos>Tornos automáticos</tornos_automaticos>
+		<tornos_automaticos-description>Está enteramente automatizado. La alimentación de la barra necesaria para cada pieza se hace también de forma automática, a partir de una barra larga que se inserta por un tubo que tiene el cabezal y se sujeta mediante pinzas de apriete hidráulico.</tornos_automaticos-description>
+
+		<rectificado>Rectificado</rectificado>
+		<rectificadoras>Rectificadoras</rectificadoras>
+		<rectificadoras-description>Servicio de Rectificado Industrial donde se da forma y a modela materiales sólidos. especialmente metales.
+La rectificadora es una máquina herramienta, utilizada para realizar mecanizados por abrasión, con mayor precisión dimensional y menores rugosidades que en el mecanizado por arranque de viruta.</rectificadoras-description>
+
+		<soldadura>Taller de soldadura</soldadura>
+		<tig>TIG (Tungsten Inert Gas)</tig>
+		<tig-description>se caracteriza por el empleo de un electrodo permanente de tungsteno, aleado a veces con torio o zirconio en porcentajes no superiores a un 2%. Dada la elevada resistencia a la temperatura del tungsteno.
+		La gran ventaja de este método de soldadura es, básicamente, la obtención de cordones más resistentes, más dúctiles y menos sensibles a la corrosión que en el resto de procedimientos.
+		</tig-description>
+		<mig>MIG (microalambre)</mig>
+		<mig-description>es un proceso que emplea un microalambre (electrodo) alimentado de manera continua. Entre el electrodo y la pieza a soldar, se establece un arco eléctrico y forma un charco de metal fundido que al enfriarse se solidifica y permite la unión del metal.</mig-description>
+		<electrodo>Electrodo</electrodo>
+		<electrodo-description>...</electrodo-description>
+	</dom>
+</content>

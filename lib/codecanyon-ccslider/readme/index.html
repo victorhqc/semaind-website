@@ -1,0 +1,872 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <title>CCSlider Documentation</title>
+    <!-- Framework CSS -->
+    <link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+    <!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+    <link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="assets/prettify/prettify.css" type="text/css" media="screen, projection" />
+    <style type="text/css" media="screen">
+        p, table, hr, .box { margin-bottom:25px; }
+        .box p { margin-bottom:10px; }
+        h4 { font-weight: bold;}
+        pre {
+            padding: 20px !important;
+            border: 1px solid #ccc !important;
+            background: #f6f6f7;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <div class="container">
+
+        <h3 class="center alt">&ldquo;CCSlider&rdquo; Documentation by &ldquo;Nilok Bose&rdquo; v3.0.2</h3>
+
+        <hr>
+
+        <h1 class="center">&ldquo;CCSlider&rdquo;</h1>
+
+        <div class="borderTop">
+            <div class="span-6 colborder info prepend-1">
+                <p class="prepend-top">
+                    <strong>
+                    Created: 02/03/2011<br>
+                    By: Nilok Bose<br>
+                    Email: <a href="mailto:cosmocoder@gmail.com">cosmocoder@gmail.com</a>
+                    </strong>
+                </p>
+            </div><!-- end div .span-6 -->
+
+            <div class="span-12 last">
+                <p class="prepend-top append-0">Thank you for purchasing my item. If you have any questions that are beyond the scope of this help
+                file, please feel free to email via my user page contact form <a href="http://codecanyon.net/user/cosmocoder">here</a>. Thanks so much!
+                </p>
+            </div>
+        </div><!-- end div .borderTop -->
+
+        <hr>
+
+        <h2 id="toc" class="alt">Table of Contents</h2>
+        <ol class="alpha">
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#howto">How to Use</a>
+            	<ul>
+            		<li><a href="#htmlSetup">HTML Setup</a></li>
+            		<li><a href="#cssSetup">CSS Setup</a></li>
+            		<li><a href="#jsSetup">Javascript Setup</a></li>
+            		<li><a href="#api">API Functions</a></li>
+            		<li><a href="#examples">Examples</a></li>
+            		<li><a href="#customTransition">Custom Transitions</a></li>
+            		<li><a href="#customHtml">Animate Custom HTML Content</a></li>
+            	</ul>
+            </li>
+            <li><a href="#cssFiles">CSS Files</a></li>
+            <li><a href="#javascript">JavaScript Files</a></li>
+            <li><a href="#credits">Credits</a></li>
+        </ol>
+
+        <hr>
+
+
+
+        <h3 id="intro"><strong>A) Introduction</strong> - <a href="#toc">top</a></h3>
+
+        <p>CCSlider is a jQuery slideshow plugin. It is unique from other jQuery based sliders because it provides 3d image effects. Overall there
+            are 14 stunning 3d effects, and also 16 stylish 2d effects. It is fully responsive and works in all screen sizes ranging from desktop to mobile browsers.
+			You can even use touch gestures to navigate through the slides in iOS, Android and other touch-screen devices. Just like any other jQuery plugin it is
+			extremely easy to use. The steps to implement the available options will be explained in the next section.
+        </p>
+
+        <p>Please note that the 3d effects will only work on browsers that support HTML5 Canvas. Currently this includes Firefox 3.0+, Safari 3.0+, Chrome 3.0+,
+           Opera 9.5+ and IE 9+. Internet Explorer 6, 7 and 8 do not support Canvas. CCSlider allows you to set a 2d effect as a fallback effect for browsers that
+           don't support Canvas. Hence visitors to your web page using old browsers will still see a nice slideshow.
+        </p>
+
+        <p>If you want to test this item locally then keep one thing in mind. On old versions of Chrome and Safari there were some security restrictions which did
+           not allow the use of images in Canvas when operated locally. In such cases to see the 3d effects in Chrome/Safari you have to run the slider from a server.
+           A local server environment like XAMPP, MAMP, WAMP or LAMP will do very well. There are no such complications in Firefox, Opera, IE9 and newer versions of Chrome/Safari.
+        </p>
+
+
+
+        <hr>
+
+
+
+        <h3 id="howto"><strong>B) How to Use</strong> - <a href="#toc">top</a></h3>
+
+        <h3 id="htmlSetup">HTML Setup</h3>
+
+        <p>To use CCSlider you have to include jQuery and the CCSlider jQuery plugin in your page ( make sure jQuery is attached first ). You will also need
+           the jquery easing plugin for special easing effects.
+        </p>
+
+<pre class="prettyprint lang-html">
+&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/jquery.easing.1.3.js"&gt;&lt;/script&gt;
+&lt;script src="js/jquery.ccslider-3.0.2.min.js"&gt;&lt;/script&gt;
+</pre>
+
+        <p>Note here that we have referenced jQuery from the Google servers. Doing so will allow jQuery to be loaded much faster. Also the current version
+           of jQuery at the time of writing is 1.9.1, and be sure to always include the latest version of jQuery. Keep in mind that CCSlider requires jQuery
+           version 1.4 and higher to work. We will also need the css file.
+        </p>
+
+<pre class="prettyprint lang-html">
+&lt;link rel="stylesheet" href="css/ccslider.css" /&gt;
+</pre>
+
+        <p>Finally to include the images, just create a div and place all your images there, like so</p>
+
+<pre class="prettyprint lang-html">
+&lt;div id="slider"&gt;
+    &lt;img src="pic1.jpg" alt="" /&gt;
+    &lt;img src="pic2.jpg" alt="" /&gt;
+    &lt;img src="pic3.jpg" alt="" /&gt;
+&lt;/div&gt;
+</pre>
+
+        <p>Note that the slider div in the example above has the id "slider". But you can of course change it to anything. In fact you can use any selector
+           when you call the CCSlider plugin.
+        </p>
+
+        <p>CCSlider supports html captions. If you want to have a simple caption then put the caption text in the alt attribute of the corresponding image.
+           If you want to have a html caption then create a div with class <strong>cc-caption</strong> and an id of your choice. Put the contents of the html caption inside
+           that div. Then add the id of that div to the <strong>data-captionelem</strong> attribute of the corresponding image tag. An example is given below.
+        </p>
+
+<pre class="prettyprint lang-html">
+&lt;div id="slider"&gt;
+    &lt;img src="pic1.jpg" alt="A simple caption" /&gt;
+    &lt;img src="pic2.jpg" alt="" data-captionelem="#caption" /&gt;
+    &lt;img src="pic3.jpg" alt="" /&gt;
+&lt;/div&gt;
+
+&lt;div id="caption" class="cc-caption"&gt;This is a html caption&lt;/div&gt;
+</pre>
+
+	<p>As of version 3.0, CCSlider provides 4 caption positions and supports different caption positions for each slide. In order to specify a caption position for a slide you have to use
+	   the <strong>data-caption-position</strong> attribute in the corresponding image tag. An example is given below.
+	</p>
+	
+<pre class="prettyprint lang-html">
+&lt;div id="slider"&gt;
+    &lt;img src="pic1.jpg" alt="A simple caption at bottom" data-caption-position="bottom" /&gt;
+    &lt;img src="pic2.jpg" alt="Another caption at top" data-caption-position="top" /&gt;
+    &lt;img src="pic3.jpg" alt="Another caption on the left" data-caption-position="left" /&gt;
+    &lt;img src="pic4.jpg" alt="Another caption on the right" data-caption-position="right" /&gt;
+&lt;/div&gt;
+</pre>
+
+
+    <p>CCSlider as of version 2.0 also supports custom HTML content for each slide. These contents appear over the corresponding slide images. In order to have some
+       html content for a particular slide first create a div with class <strong>cc-html</strong> and an id of your choice and put your html content in that div. Then
+       add the id of that div to the <strong>data-htmlelem</strong> attribute of the corresponding image tag. An example is given below.
+    </p>
+
+<pre class="prettyprint lang-html">
+&lt;div id="slider"&gt;
+    &lt;img src="pic1.jpg" alt="" data-htmlelem="#slidehtml1" /&gt;
+    &lt;img src="pic2.jpg" alt="" /&gt;
+    &lt;img src="pic3.jpg" alt="" /&gt;
+&lt;/div&gt;
+
+&lt;div id="slidehtml1" class="cc-html"&gt;
+    &lt;h3&gt;Custom HTML&lt;/h3&gt;
+    &lt;p&gt;Some content for this slide&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+
+
+        <p>You can style the html content inside div.cc-html by using its id "slidehtml1" as a hook to target its children. You can position the html content anyway you want
+            by using css. You can also animate the html content anyway you want by using the help of the slider api functions, the procedure for which will be explained later.
+			You can even embed videos (Flash or HTML5) in the slides by utilising this feature.
+        </p>
+        
+        <p>As of version 2.0 you can also make the slide images act as links to external pages. To do so you must enter the url of the page that you want to link to in the
+           <strong>data-href</strong> attribute of the corresponding image. So an example code for that would look like:
+        </p>
+        
+<pre class="prettyprint lang-html">
+&lt;div id="slider"&gt;
+    &lt;img src="pic1.jpg" alt="" data-href="http://google.com" /&gt;
+    &lt;img src="pic2.jpg" alt="" /&gt;
+    &lt;img src="pic3.jpg" alt="" /&gt;
+&lt;/div&gt;
+</pre>
+
+
+        <h3 id="cssSetup">CSS Setup</h3>
+
+        <p>The background for the captions is set using 'rgba' color values. IE8 and below do not support it. To have transparent color values we
+           have to use proprietary IE filters. If the filter property is not set then the captions will have a solid color background. So for a background
+           color of 'rgba(0, 0, 0, 0.7)', which is the default color set in ccslider.css, put the following code in the <code>&lt;head&gt;</code> section of
+           your html page,
+        </p>
+
+<pre class="prettyprint lang-html">
+&lt;!--[if lt IE 9]&gt;
+&lt;style type="text/css"&gt;
+    .slider-caption {
+        background: transparent;
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2000000,endColorstr=#B2000000)"; /* IE8 */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2000000,endColorstr=#B2000000);   /* IE6 &amp; 7 */
+        zoom: 1;
+    }
+&lt;/style&gt;
+&lt;![endif]--&gt;
+</pre>
+
+        <p>If you want to have a loading state for your images, then just add the following css</p>
+
+<pre class="prettyprint lang-css">
+#slider {
+    width: 600px;  /* change width and height accordingly */
+    height: 300px;
+    background: #fff url(images/loading.gif) center center no-repeat;
+}
+
+#slider img {
+    visibility: hidden;
+}
+</pre>
+
+        <p>Once the images have loaded the loading.gif will be removed and the slideshow will start. Note that you need to apply the CSS to your
+           unique slider ID because the plugin won't know the ID until after it loads. Adding this CSS will prevent seeing a flash of unstyled content
+           before the plugin finishes loading. You will of course change the id shown in the example above to the id of your slider div, and also set
+           a width and height for that div according to your needs. You can also use any animated gif of your choice.
+        </p>
+
+        <p>You have to remember one important fact concerning the width and height of the slider div if you choose a 3d effect. The animations for
+           3d effects need some space, more than the width and height of the images. Whatever values you pass to the <strong>imageWidth</strong> and
+           <strong>imageHeight</strong> plugin parameters described below, the width and height of the slider div must be at least greater than that
+           by about 100px. So for example if you set <code>imageWidth: 600</code> and <code>imageHeight: 300</code> then the width and height of the
+           slider div should be about
+        </p>
+
+<pre class="prettyprint lang-css">
+#slider {
+    width: 700px;
+    height: 400px;
+}
+</pre>
+
+        <p>If you do not set a higher width and height value then you will observe that while animating, parts of the images are being cut off. Therefore
+           do not forget this. You will have to tweak the width and height values of the slider div for a given value of the imageWidth and imageHeight
+           parameters to find the optimal setting, but generally values greater by 100px work well. Also whatever dimensions you set for the slider in the
+		   css, that will be treated as the maximum size of the slider. So on smaller browser windows the slider will resize by maintaining the aspect ratio
+		   as calculated from the width/height set in the css.
+        </p>
+
+        <p>On the other hand if you choose a 2d effect then the plugin will automatically find the width and height of the largest image and set the
+           width and height of the slider div to those values. Hence try to keep the width and height of all the images same because then otherwise
+           the larger images will peek behind from the smaller images. Another reason to keep the width and height of all the images the same is that,
+           if you choose a 3d effect and a visitor to your site uses an older browser like IE, then he will see a nice slideshow with a 2d fallback of
+           your choice where all the images have the same width and height.
+        </p>
+
+
+        <h3 id="jsSetup">Javascript Setup</h3>
+
+        <p>To activate the CCSlider plugin call it like this</p>
+
+<pre class="prettyprint lang-javascript">
+&lt;script&gt;
+     $(window).load(function() {
+         $('#slider').ccslider();
+     });
+&lt;/script&gt;
+</pre>
+
+        <p>Note here that we are calling the plugin after the window load event fires. This ensures that all the images have loaded before the slideshow animations
+           begin. But using the window load event forces the slider to wait until every image and other resources (such as js and css files) on the page are loaded. You can use the <a href="https://github.com/desandro/imagesloaded/">imagesloaded</a> plugin to ensure that the slider is initialzed right after all the images contained in the slider are loaded, and there is no need to wait for every other resource on the page to finish loading. If you just leave it at that then CCslider will work just fine with the default settings. But of course you want more options to customize ! Calling CCSlider
+           with options of your choice is very simple, and it will look something like this
+        </p>
+
+<pre class="prettyprint lang-javascript">
+$('#slider').ccslider({ 
+    option1: 'value',
+    option2: 'value',
+    option3: 'value'
+});
+</pre>
+
+        <p>Below all the plugin parameters with their default values are listed.</p>
+
+<pre class="prettyprint lang-javascript">
+$('#slider').ccslider({
+    effectType: '3d',
+    effect: 'cubeUp',
+    _3dOptions: {
+                  imageWidth: 600,
+                  imageHeight: 300,
+                  innerSideColor: '#444',
+                  transparentImg: false,
+                  makeShadow: true,
+                  shadowColor: 'rgba(0, 0, 0, 0.7)',
+                  slices: 3,
+                  rows: 3,
+                  columns: 3,
+                  delay: 200,
+                  delayDir: 'first-last',
+                  depthOffset: 400,
+                  sliceGap: 20,
+                  easing: 'easeInOutCubic',
+                  fallBack: 'fadeSlide',
+                  fallBackSpeed: 1200
+                },
+    animSpeed: 1200,
+    startSlide: 0,
+    directionNav: true,
+    controlLinks: true,
+    controlLinkThumbs: false,
+    controlThumbLocation: '',
+    autoPlay: true,
+    pauseTime: 3000,
+    pauseOnHover: true,
+    captions: true,
+    captionPosition: 'bottom',
+    captionAnimation: 'slide',
+    captionAnimationSpeed: 600,
+    beforeSlideChange: function(index){},
+    afterSlideChange: function(index){}
+});
+</pre>
+
+        <p>The function of each plugin parameter is described below.</p>
+
+
+        <h4>effectType</h4>
+        <p>The type of effect that you want and it should be either '3d' or '2d'.</p>
+
+        <hr>
+
+        <h4>effect</h4>
+        <p>The name of the effect. Specify a 3d effect name if you have chosen a 3d effect type. The same goes for 2d effect.</p>
+        <p>List of 3d effects:</p>
+        <ol>
+            <li>cubeUp</li>
+            <li>cubeDown</li>
+            <li>cubeRight</li>
+            <li>cubeLeft</li>
+            <li>flipUp</li>
+            <li>flipDown</li>
+            <li>flipRight</li>
+            <li>flipLeft</li>
+            <li>blindsVertical</li>
+            <li>blindsHorizontal</li>
+            <li>gridBlocksUp</li>
+            <li>gridBlocksDown</li>
+            <li>gridBlocksRight</li>
+            <li>gridBlocksLeft</li>
+        </ol>
+
+        <p>List of 2d effects:</p>
+        <ol>
+            <li>fade</li>
+            <li>horizontalOverlap</li>
+            <li>verticalOverlap</li>
+            <li>horizontalSlide</li>
+            <li>verticalSlide</li>
+            <li>horizontalWipe</li>
+            <li>verticalWipe</li>
+            <li>verticalSplit</li>
+            <li>horizontalSplit</li>
+            <li>fadeSlide</li>
+            <li>circle</li>
+            <li>fadeZoom</li>
+            <li>clock</li>
+            <li>zoomInOut</li>
+            <li>spinFade</li>
+            <li>rotate</li>
+        </ol>
+
+        <p>As of version 1.1 you have the option to randomize the effects between each slide, both for 3d and 2d effects. To enable it just write <code>effect: 'random'</code>.
+           If you choose 3d effect type and the shadow option is also enabled, then the effects will randomly change between the 'cube' effects only, i.e. 'cubeUp', 'cubeDown',
+           'cubeRight' and 'cubeLeft'. If the shadow option is disabled then the effects will randomly change between all the available 3d effects. Also note that the 2d effects
+           'circle', 'clock', 'spinFade' and 'rotate' require CSS3 properties which are not supported in IE8 and below. So in these browsers these effects fallback to the 'fadeSlide' effect.
+        </p>
+
+        <hr>
+
+        <h4>_3dOptions</h4>
+        <p>A list of options that are applicable when you choose a 3d effect. Their functions are described as follows:</p>
+        <ul>
+            <li><strong>imageWidth</strong> - the width of the rendered image.</li>
+            <li><strong>imageHeight</strong> - the height of the rendered image.</li>
+            <li><strong>innerSideColor</strong> - color of the inner side of the cube slices. Applicable only for 'cube' 3d effects.</li>
+			<li><strong>transparentImg</strong> - if you are using transparent png images as your slides then enable this. Enabling this avoids an image "pile up" effect.</li>
+            <li><strong>makeShadow</strong> - whether a shadow will be rendered or not. Applicable only for 'cube' 3d effects.</li>
+            <li><strong>shadowColor</strong> - if you want a shadow then you can mention its color. Standard css color values apply</li>
+            <li><strong>slices</strong> - number of slices in which the image will be divided.</li>
+            <li><strong>rows</strong> - number of rows in which the image will be divided (only required for 'grid' effects).</li>
+            <li><strong>columns</strong> - number of columns in which the image will be divided (only required for 'grid' effects).</li>
+            <li><strong>delay</strong> - delay between the animation of each slice. Value is in ms.</li>
+            <li><strong>delayDir</strong> - the direction in which the delay will propagate. Available options are &ndash; 'first-last', 'last-first', 'fromCentre' and 'toCentre'.</li>
+            <li><strong>depthOffset</strong> - the distance the slices will travel along the z-axis (away from the screen) while animating.</li>
+            <li><strong>sliceGap</strong> - the distance/separation between the slices while animating.</li>
+            <li><strong>easing</strong> - an easing option of your choice. Generally easing values of the 'InOut' variety look much better.</li>
+            <li><strong>fallBack</strong> - a 2d effect fallback for older browsers. Mention any effect from available the list of 2d effects. When the fallback effect is activated in an older browser then a class called <strong>fallback</strong> is applied on the slider container.</li>
+            <li><strong>fallBackSpeed</strong> - The time for the animation to be complete in case a 2d effect is activated for an older browser.</li>
+        </ul>
+
+        <p>Try not to set to too large a width and height for the rendered images, and don't set too many slices. The reason for this is that the 3d effects
+           require more CPU processing power than the ordinary 2d effects. So too large images or too many slices will overload the CPU and result in choppy
+           animations. Although modern browsers have faster javascript engines and most computers nowadays have quite good processing capabilities, but still it
+           is better to be careful since all users won't have the latest browsers and hardware configuration. So some animation effect which is fast for one one
+           user can be jerky/slow for another.
+        </p>
+
+        <hr>
+
+        <h4>animSpeed</h4>
+        <p>This is the time in ms for the animation to be complete. If 3d effect is chosen then this is the time that each slice will take to animate.</p>
+
+        <hr>
+
+        <h4>startSlide</h4>
+        <p>Use this option to start the slideshow at any slide of your choice. Here you have to enter the slide number. The numbering of the slides is zero
+           based, which means that the first slide is 0, the second slide is 1, and so on. The default value is 0, i.e. the first slide.
+        </p>
+
+        <hr>
+
+        <h4>directionNav</h4>
+        <p>This option is to enable next/prev buttons. Enter 'true' if you want them and 'false' if you don't. They are enabled by default.</p>
+
+        <hr>
+
+        <h4>controlLinks</h4>
+        <p>This option enables links to each individual slide. When enabled then the default output is an unordered list where each list item contains
+           a number corresponding to the slide it links to. But you can style the list items to be anything you want. If you want to have bullet style links
+           such as shown in the demo, then just set <code>text-indent: -9999px</code> on the list items. That will hide the numbers and then you can apply a
+           background of your choice to have bullet style links. Also currently highlighted links have the class "active" applied to the corresponding li tag.
+           You can use this to change the active styling of the links as you wish.
+        </p>
+
+        <hr>
+
+        <h4>controlLinkThumbs</h4>
+        <p>If you want to have thumbnails of your slide images as control links then set this option to 'true'. It is disabled by default. If you enable thumbnails for control links then a class
+           called <strong>controlThumbs</strong> is applied on the slider container.
+        </p>
+
+        <hr>
+
+        <h4>controlThumbLocation</h4>
+        <p>The folder path for the thumbnail images. The folder path for the thumbnails should be relative to your html/php page. You can also of course use absolute
+           paths to the folders in the form - http://mysite.com/images/thumbs/ . Take care to insert the trailing slash in the path for the folder containing the thumbnails. 
+           The name of the thumbnails should be provided in the <strong>data-thumbname</strong> attribute of the corresponding image tag. You should also set the width
+           and height of the control link list items in your stylesheet equal to the width and height of your thumbnails. So an example markup in such a case would be:
+        </p>
+
+<pre class="prettyprint">
+&lt;!-- HTML Code --&gt;
+&lt;div id="slider"&gt;
+    &lt;img src="pic1.jpg" alt="" data-thumbname="pic1-thumb.jpg" /&gt;
+    &lt;img src="pic2.jpg" alt="" data-thumbname="pic2-thumb.jpg" /&gt;
+    &lt;img src="pic3.jpg" alt="" data-thumbname="pic3-thumb.jpg" /&gt;
+&lt;/div&gt;
+
+//JS code
+&lt;script&gt;
+     $(window).load(function() {
+         $('#slider').ccslider({
+             controlLinks: true,
+             controlLinkThumbs: true,
+             controlThumbLocation: 'gallery/thumbs/'
+         });
+     });
+&lt;/script&gt;
+
+/* CSS code. Here just a width and height is being provided. There can of course be other styling.
+   All links that have thumbnails will have the class "linkThumb" applied.
+*/
+.control-links li.linkThumb {
+    width: 100px;
+    height: 50px;
+}
+</pre>
+
+        <hr>
+
+        <h4>autoPlay</h4>
+        <p>Enter 'true' if you want autoplay enabled. It is enabled by default. Also when this is enabled a play/pause button will be generated. As of version 3.0.2 the slider uses the HTML5 Page Visibility API, in supported browsers, to detect when the tab/window containing the slider is out of focus and accordingly stops the autoplay, and resumes the autoplay when the tab/window is again in focus. This helps in preventing unnecessary consumption of battery power and CPU resources.</p>
+
+        <hr>
+
+        <h4>pauseTime</h4>
+        <p>The time interval for which a particular slide will be visible before advancing on to the next.</p>
+
+        <hr>
+
+        <h4>pauseOnHover</h4>
+        <p>If autoPlay is enabled then this gives you the option to pause the slideshow when hovering over it. Autoplay will resume when the mouse moves away
+           from the slideshow.
+        </p>
+
+        <hr>
+
+        <h4>captions</h4>
+        <p>If you want captions then set this to 'true'. Captions are enabled by default.</p>
+
+        <hr>
+
+		<h4>captionPosition</h4>
+		<p>There are 4 supported caption positions and they are 'bottom', 'top', 'left' and 'right'. The default value is 'bottom'.</p>
+		
+		<hr>
+
+        <h4>captionAnimation</h4>
+        <p>Animated effect for captions. Available options are 'fade', 'slide' and 'none'. The default effect is 'slide'.</p>
+
+        <hr>
+
+        <h4>captionAnimationSpeed</h4>
+        <p>Animation time for the captions.</p>
+
+        <hr>
+
+        <h4>beforeSlideChange</h4>
+        <p>As the name suggests this function is executed before a slide is changed. If there is anything that you want to be executed before a
+           slide changes you can run it from inside this function. This function receives an argument which is the index number of the slide that
+           is about to become visible. Remember that the index numbering is zero based. So the first slide will have index 0, the
+           second will have index 1, and so on. CCSlider also provides a 'beforeSlideChange' event which you can bind to by using the jQuery bind() method.
+           This custom event has the advantage that you can bind as many functions to the event as you want and at any place in your code, and they will
+           fire when the regular 'beforeSlideChange' function does. So to use this event you would write your code as follows:
+        </p>
+
+<pre class="prettyprint lang-javascript">
+$('#slider').on('beforeSlideChange', function(event, index){
+    alert('Slide'+ (index+1) +' is about to become visible');
+});
+</pre>
+
+        <hr>
+
+        <h4>afterSlideChange</h4>
+        <p>This is similar to the above function except that it is executed after a slide changes. This function also receives an argument which is the
+           index number of the slide that has become visible. Here also CCSlider provides a custom event called 'afterSlideChange' which you can use as
+           illustrated above. For eg.
+        </p>
+
+<pre class="prettyprint lang-javascript">
+$('#slider').on('afterSlideChange', function(event, index){
+    alert('Slide'+ (index+1) +' is now visible');
+});
+</pre>
+
+        <hr>
+
+        <h3 id="api">API functions</h3>
+
+        <p>CCSlider gives you access to some use useful api functions that you can use to programmatically manipulate the slideshow. These api functions
+           are stored in a javascript object using the jquery data() method and attached to the slider container. The available functions are:
+        </p>
+
+        <ul>
+            <li><strong>next()</strong> - go to the next slide.</li>
+            <li><strong>prev()</strong> - go to the previous slide.</li>
+            <li><strong>stop()</strong> - stop autoplaying of slideshow. Only works if 'autoPlay' option was enabled while initializing the slider.</li>
+            <li><strong>start()</strong> - start autoplaying of slideshow. Only works if 'autoPlay' option was enabled while initializing the slider.</li>
+            <li><strong>goToSlide(index)</strong> - go to a particular slide whose slide index number is provided as an argument.</li>
+            <li><strong>destroy()</strong> - destroy/remove the slider plugin instance.</li>
+        </ul>
+
+        <p>In order to gain access to these functions you can proceed by using either of the two methods as shown below:</p>
+
+<pre class="prettyprint lang-javascript">
+// method one
+$('#slider').data('ccslider').next();
+
+// method two
+var api = $('#slider').data('ccslider');
+api.next();
+</pre>
+
+        <p>Here method two has the obvious advantage when you want to use the api functions multiple times in your code. By storing the reference to the api object
+           in a variable you can call the api functions easily without each time using the jQuery data() method to get the api object.
+        </p>
+
+
+        <h3 id="examples">Examples</h3>
+
+        <p>Example of a slideshow with 3d "cubeUp" effect, having 3 slices. The rendered image width will be 600px and height will be 300px. Also the
+           slices will go back a distance of 300px along the z-axis and the separation between the slices will be 50px. The fallback effect will be 'horizontalWipe',
+           and autoplay and captions will be enabled.
+        </p>
+
+<pre class="prettyprint lang-javascript">
+$('#slider').ccslider({
+    effectType: '3d',
+    effect: 'cubeUp',
+    _3dOptions: {
+                  imageWidth: 600,
+                  imageHeight: 300,
+                  slices: 3,
+                  depthOffset: 300,
+                  sliceGap: 50,
+                  fallBack: 'horizontalWipe',
+                },
+    autoPlay: true,
+    captions: true
+});
+</pre>
+
+        <p>If you want to setup a 2d slideshow with effect 'horizontalSlide' and keep the default options, then set up ccslider like so</p>
+
+<pre class="prettyprint lang-javascript">
+$('#slider').ccslider({
+    effectType: '2d',
+    effect: 'horizontalSlide'
+});
+</pre>
+
+        <p>Example of a slideshow with "cubeRight" effect, 5 slices, a shadow of color '#666', inner side color of slices '#fff', easing set to 'easInOutElastic',
+           delay between the slices is 300ms, the delay propagation direction is from the last to the first slice and keeping the other parameter values to their default values.
+        </p>
+
+<pre class="prettyprint lang-javascript">
+$('#slider').ccslider({
+    effectType: '3d',
+    effect: 'cubeRight',
+    _3dOptions: {
+                  innerSideColor: '#fff',
+                  makeShadow: true,
+                  shadowColor: '#666',
+                  slices: 5,
+                  delay: 300,
+                  delayDir: 'last-first',
+                  easing: 'easInOutElastic'
+                }
+});
+</pre>
+
+        <p>Example of a slideshow with "gridBlocksUp" effect where the slide image will be divided into a grid of 3 rows and 5 columns. The delay between the slices will be
+          30ms and the delay direction will propagate outwards from the centre of the grid.
+        </p>
+
+<pre class="prettyprint lang-javascript">
+$('#slider').ccslider({
+    effectType: '3d',
+    effect: 'gridBlocksUp',
+    _3dOptions: {
+                  makeShadow: false,
+                  rows: 3,
+                  columns: 5,
+                  delay: 30,
+                  delayDir: 'fromCentre'
+                }
+});
+</pre>
+
+        <p>Example setup where the animation speed is 1 second, autoPlay is enabled but the pauseOnHover option is turned off and each slide is visible for 5 seconds before advancing
+           onto the next. The other parameters keep their default values.
+        </p>
+
+<pre class="prettyprint lang-javascript">
+$('#slider').ccslider({
+    animSpeed: 1000,
+    autoPlay: true,
+    pauseTime: 5000,
+    pauseOnHover: false
+});
+</pre>
+
+        <p>Another example where the slideshow is setup to have animated captions with effect 'fade' and the animation speed is 400ms.</p>
+
+<pre class="prettyprint lang-javascript">
+$('#slider').ccslider({
+    captions: true,
+    captionAnimation: 'fade',
+    captionAnimationSpeed: 400
+});
+</pre>
+
+        <p>This example illustrates how to use the callback functions</p>
+
+<pre class="prettyprint lang-javascript">
+$('#slider').ccslider({
+    beforeSlideChange: function(){ alert('The slide will now change'); },
+    afterSlideChange: function(index){ alert('Slide'+ (index+1) +' is now visible'); }
+});
+</pre>
+
+        <h3 id="customTransition">Custom Transitions</h3>
+
+        <p>As of version 2.0 CCSlider supports custom transitions per slide. This means that you can set up what will be the transition effect on a particular slide
+           which will be different from the global settings. In order to specify the custom transition parameters on a slide you will have to use the <strong>data-transition</strong>
+           attribute. If you have initialized the plugin to have 3d effects then you can pass the options available for 3d effects and similarly for 2d effects.
+        </p>
+
+        <p>The options that you can pass to the data-transition attribute for 3d effects are:</p>
+
+        <ul>
+            <li>effect</li>
+            <li>slices</li>
+            <li>rows</li>
+            <li>columns</li>
+            <li>delay</li>
+            <li>delayDir</li>
+            <li>depthOffset</li>
+            <li>sliceGap</li>
+            <li>easing</li>
+            <li>animSpeed</li>
+        </ul>
+
+        <p>The options that you can pass to the data-transition attribute for 2d effects are:</p>
+
+        <ul>
+            <li>effect</li>
+            <li>animSpeed</li>
+        </ul>
+
+        <p>In order to apply custom transition parameters to a slide you have proceed as follows:</p>
+
+<pre class="prettyprint lang-html">
+&lt;img alt="" data-transition='{"effect": "cubeUp", "slices": 9}' /&gt;
+</pre>
+
+        <p>Note that the value for the data-transition attribute is encapsulated in single quotes rather than the traditional double quotes. This fact is essential because
+           this helps in treating the attribute value as a javascript object. If you do not use single quotes the custom transitions values cannot be read by the plugin.
+           Also the values for the options passed in the data-transition attribute takes precedence over any corresponding option values passed to the plugin while initializing it.
+           You should also keep in mind that you must not mix option values for 3d and 2d effects. So if you initialize the plugin with the 3d "cubeUp" effect and then pass the
+           value <code>"effect": "fadeSlide"</code> to the data-transition attribute on some slide then it will not work and it is likely that the plugin will cease to work also.
+        </p>
+
+
+        <h3 id="customHtml">Animating Custom HTML Content</h3>
+
+        <p>As stated previously, CCSlider supports, as of version 2.0, custom html content for each slide. This content appears above the slide images and you can style them as
+           you want using css. You can also animate this content by using <strong>beforeSlideChange</strong> and <strong>afterSlideChange</strong> api functions. For eg. let us assume
+           that we have custom html content on slides 1 and 2. The process of inserting this content has already been described. Here we will illustrate the animation process.
+        </p>
+
+        <p>We assume that the custom html content for both the slides is of the form:</p>
+
+<pre class="prettyprint lang-html">
+&lt;div id="slidehtml1" class="cc-html"&gt;
+    &lt;h3&gt;Custom HTML&lt;/h3&gt;
+    &lt;p&gt;Content for slide 1&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="slidehtml2" class="cc-html"&gt;
+    &lt;h3&gt;Custom HTML&lt;/h3&gt;
+    &lt;p&gt;Content for slide 2&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+
+<p>Then in order to animate the entry of these html contents we would proceed as follows:</p>
+
+<pre class="prettyprint lang-javascript">
+$(window).load(function(){
+    $('#slider').ccslider({
+        effect: 'random', // some initialization options
+        beforeSlideChange: function(index) {
+            $(this).find('div.cc-html').children().hide();  // hide content before slide becomes visible
+        },
+        afterSlideChange: function(index) {
+            if( index === 0 ) {  // animation for content of slide 1 after slide becomes visible
+                var children = $('#slidehtml1').children();
+                children.css({ position: 'relative', top: '-20px'});
+                children.filter('h3').animate({ top: 0, opacity: 'toggle'}, 600);
+                children.filter('p').delay(100).animate({ top: 0, opacity: 'toggle'}, 600);
+            }
+            if(index === 1) {  // animation for content of slide 2
+                var children = $('#slidehtml2').children();
+                children.css({ position: 'relative', left: '-300px'});
+                children.filter('h3').animate({ left: 0, opacity: 'toggle'}, 600);
+                children.filter('p').delay(100).animate({ left: 0, opacity: 'toggle'}, 600);
+            }
+        }
+    });
+
+    // animation for html content of first slide on page load
+    var children = $('#slidehtml1').children().hide();
+    children.css({ position: 'relative', top: '-20px'});
+    children.filter('h3').animate({ top: 0, opacity: 'toggle'}, 600);
+    children.filter('p').delay(100).animate({ top: 0, opacity: 'toggle'}, 600);
+});
+</pre>
+
+        <p>This way you have full freedom to style and animate your custom html content anyway you want. You can see this in action in the demo files provided.
+           By default the custom html content for a slide is shown abruptly without animation when the slide becomes visible.
+        </p>
+
+
+        <hr>
+
+
+        <h3 id="cssFiles"><strong>B) CSS Files</strong> - <a href="#toc">top</a></h3>
+
+        <p>This item has one main css file - ccslider.css . You can find the styling for the various elements that are generated dynamically. The code
+           is well commented. This file only contains the most basic styling properties for the various elements in order to make the plugin work correctly.
+           You can change the styling of any element to better suit your project. For most elements you have to set the width, height, background. You do not
+           necessarily need to edit the style values from within ccslider.css itself. This css file also includes styles for some elements that are generated
+           dynamically to aid in the animation process. You must <strong>not</strong> change the style declaration of these elements. The style values of your
+           choice can be contained in the stylesheet of your project. So if for example your project stylesheet is named style.css you will then include it like so
+        </p>
+
+<pre class="prettyprint lang-html">
+&lt;link rel="stylesheet" href="css/ccslider.css" /&gt;
+&lt;link rel="stylesheet" href="css/style.css" /&gt;
+</pre>
+
+        <p>By including your style.css after ccslider.css you will override the default styling of the slider elements and your styling contained in
+           style.css will take effect.
+        </p>
+
+
+        <hr>
+
+
+
+        <h3 id="javascript"><strong>C) JavaScript Files</strong> - <a href="#toc">top</a></h3>
+
+        <p>This item's main javascript file is of course jquery.ccslider-3.0.2.js. But jquery-1.9.1.min.js and jquery.easing.1.3.js are also included. It has already been
+           shown how to reference them in your html file. You should follow best practices and include them at the very end of your document, just before the closing
+           <code>body</code> tag. This allows for faster loading of web pages. This is how the javascript files are included in the demo.
+        </p>
+
+
+        <hr>
+
+
+        <h3 id="credits"><strong>D) Credits</strong> - <a href="#toc">top</a></h3>
+
+        <p>The original code for projective texturing of images was developed by <a href="http://acko.net/blog/projective-texturing-with-canvas">Steven Wittens</a>.
+           This code has been modified slightly to better suit this project.
+        </p>
+
+
+        <hr>
+
+
+        <p>I hope that you like this item and it makes your web page more stunning. If you find any bugs then don't hesitate to let me know. Also if you want to see some
+           new features in this item or have any ideas to make the overall item much better then you can send me the details. All future updates are of course free !
+        </p>
+
+        <p>Once again, thank you so much for purchasing this item. As I said at the beginning, I'd be glad to help you if you have any questions
+        relating to this item. No guarantees, but I'll do my best to assist. If you have a more general question relating to the items on Codecanyon,
+        you might consider visiting the forums and asking your question in the "Item Discussion" section.
+        </p>
+
+        <p class="append-bottom alt large"><strong>Nilok Bose</strong></p>
+        <p><a href="#toc">Go To Table of Contents</a></p>
+
+        <hr class="space">
+    </div><!-- end div .container -->
+
+
+    <script type="text/javascript" src="assets/prettify/prettify.js"></script>
+    <script type="text/javascript">
+        prettyPrint();
+    </script>
+
+</body>
+</html>

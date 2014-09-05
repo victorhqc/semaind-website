@@ -1,0 +1,33 @@
+<content>
+	<dom>
+		<title>Nos preocupamos por garantizar a nuestros clientes la máxima confiabilidad ofreciendo los más altos estándares de calidad  en la elaboración de todos nuestros productos del mercado.</title>
+		<piezas>Piezas</piezas>
+		<maquinas>Máquinas</maquinas>
+		<refacciones>Refacciones</refacciones>
+
+		<rectificadas>Rectificadas</rectificadas>
+		<cortes>Cortes de metal</cortes>
+		<diseno>Diseños exclusivos</diseno>
+		<metalicas>Metálicas</metalicas>
+
+		<enfriadores>Enfriadores</enfriadores>
+		<enfriadores_sup>Enfriadores (Vista superior)</enfriadores_sup>
+		<enfriadores_lat>Enfriadores (Vista lateral)</enfriadores_lat>		
+		<molde>Molde</molde>
+		<molde_sup>Molde (Vista superior)</molde_sup>
+		<pines_loc>Pines localizadores</pines_loc>
+		<clamp_pos>Clamp de posición</clamp_pos>
+		<empujadores>Empujadores</empujadores>
+		<bases_int>Bases (Vista interior)</bases_int>
+		<bases_ext>Bases (Vista exterior)</bases_ext>
+		<flechas_nav>Flechas porta navajas</flechas_nav>
+		<flechas_nav_sup>Flechas porta navajas (Vista superior)</flechas_nav_sup>
+		<flechas_nav_zoom>Flechas porta navajas (Vista Zoom)</flechas_nav_zoom>
+		<manifool>Manifool</manifool>
+		<navajas>Navajas</navajas>
+		<porta_navajas>Porta navajas</porta_navajas>
+		<porta_nariz_lat>Porta nariz (Vista lateral)</porta_nariz_lat>
+		<porta_nariz_sup>Porta nariz (Vista superior)</porta_nariz_sup>
+		<fixture_clamp_gir>Fixture con clamp giratorio</fixture_clamp_gir>
+	</dom>
+</content>

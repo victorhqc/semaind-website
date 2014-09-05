@@ -1,0 +1,11 @@
+#main-projects-container {
+	margin: 0;
+}
+
+.project-container img {
+	margin-bottom: 15px;
+}
+
+.project-container .row {
+	margin: 0;
+}

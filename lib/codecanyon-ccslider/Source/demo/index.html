@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>CCSlider</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,bold' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/ccslider.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	
+	<style type="text/css">		
+		body {
+			width: 100%;
+			max-width: 1000px;
+		}
+		
+		#slider {
+			width: 1000px;
+			height: 450px;
+		}
+		
+		#slider .control-links {
+			margin-top: -15px;
+		}
+		
+		#demo-description {
+			max-width: 900px;
+			width: 90%;
+			margin: 60px auto;
+			color: #fff;
+			font: 20px 'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+		}
+	</style>
+	
+	<!--[if lt IE 8]>
+		<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+	<![endif]-->
+	
+	<!--[if lt IE 9]>
+		<style type="text/css">
+			.slider-caption {
+				background: transparent;
+				-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2FFFFFF,endColorstr=#B2FFFFFF)"; /* IE8 */
+				filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2FFFFFF,endColorstr=#B2FFFFFF);   /* IE6 & 7 */ 
+				zoom: 1;
+			}
+		</style>
+		
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->	
+
+	
+</head>
+<body>
+	
+	
+	<header>
+		<hgroup>
+			<h1 id="title"><img src="images/title.png" alt="ccslider" /></h1>
+			<h2 id="subtitle">The slider that opens a new dimension</h2>
+		</hgroup>
+		
+		<nav id="demo-nav">
+			<ul>
+				<li class="active"><a href="index.html" title="Slideshow with custom defined transitions per slide using only 'Cube' 3d effects">Demo 1</a></li>
+				<li><a href="demo2.html" title="Slideshow with randomly changing 3d effects and some transition options defined per slide">Demo 2</a></li>
+				<li><a href="demo3.html" title="Slideshow with randomly changing 2d effects">Demo 3</a></li>
+				<li><a href="demo4.html" title="Slideshow with randomly changing 2d effects and with thumbnails as control links">Demo 4</a></li>
+				<li><a href="demo5.html" title="Select any effect from the available list of 3d and 2d effects and try it out">Demo 5</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<div id="slider">
+		<img src="gallery/demo1/assassins1.jpg" alt="This is an example of a simple caption" data-caption-position="bottom" data-transition='{"effect": "cubeUp", "slices": 9, "animSpeed": 1200, "delay": 100, "delayDir": "fromCentre", "easing": "easeInOutBack", "depthOffset": 300, "sliceGap": 30}' />
+		<img src="gallery/demo1/deus-ex1.jpg" alt="" data-captionelem="#caption" data-caption-position="top" data-transition='{"effect": "cubeRight", "slices": 5, "delay": 200}' />
+		<img src="gallery/demo1/batman.jpg" alt="Images can also serve as links. To see this in effect click on this slide image" data-caption-position="left" data-href="http://google.com" data-transition='{"effect": "cubeDown", "slices": 15, "animSpeed": 3000, "delay": 30, "easing": "easeInOutElastic", "depthOffset": 200, "sliceGap": 20}' />
+		<img src="gallery/demo1/prince.jpg" alt="" data-transition='{"effect": "cubeLeft", "slices": 5, "delay": 200, "delayDir": "toCentre"}' />
+		<img src="gallery/demo1/assassins2.jpg" alt="" data-transition='{"effect": "cubeUp", "slices": 5, "animSpeed": 1300, "delay": 100, "easing": "easeInOutCubic", "depthOffset": 500, "sliceGap": 50}' />
+		<img src="gallery/demo1/deus-ex2.jpg" alt="" data-transition='{"effect": "cubeRight", "slices": 5, "delay": 200, "delayDir": "last-first"}' />				
+	</div>
+	
+	<div id="caption" class="cc-caption">This is an example of a caption with a <a href="http://www.google.com">link</a></div>
+	
+	<p id="demo-description">
+		Here each slide has a different transition with different number of slices, animation speed, delay etc. Also the shadow option is enabled and the transitions interchange between the available &ldquo;Cube&rdquo; 3d effects.
+	</p>
+	
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script>!window.jQuery && document.write('<script src="js/jquery-1.9.1.min.js"><\/script>')</script>
+	<script src="js/jquery-migrate-1.1.1.min.js"></script>
+	<script src="js/jquery.tools.tooltip.min.js"></script>
+	<script src="js/jquery.easing.1.3.min.js"></script>
+	<script src="js/jquery.ccslider-3.0.2.min.js"></script>	
+	<script>
+		$(function(){
+			$('#demo-nav').find('a').tooltip({effect: 'slide'});
+		});
+		
+		$(window).load(function(){
+			$('#slider').ccslider({
+				_3dOptions: {
+					imageWidth: 900,
+					imageHeight: 350
+				}
+			});
+		});
+	</script>
+</body>
+</html>

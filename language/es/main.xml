@@ -1,0 +1,18 @@
+<content>
+	<dom>
+		<inicio>Inicio</inicio>
+		<empresa>Empresa</empresa>
+		<productos>Productos</productos>
+		<proyectos>Proyectos</proyectos>
+		<servicios>Servicios</servicios>
+		<equipo>Equipo</equipo>
+		<contacto>Contacto</contacto>
+
+		<ini-telefonos>Teléfonos</ini-telefonos>
+		<ini-email-1>E-</ini-email-1>
+		<ini-email-2>MAIL</ini-email-2>
+
+		<footer-text-1>TODOS LOS DERECHOS RESERVADOS SEMAIND S.A. DE C.V.</footer-text-1>
+		<footer-text-2>CHIHUAHUA, CHIH. MÉXICO 2013</footer-text-2>
+	</dom>
+</content>
